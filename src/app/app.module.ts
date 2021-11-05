@@ -6,24 +6,24 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { MaterialModule } from './material/material.module';
 import { LevelPipe } from './level.pipe';
+import { EmployeeListModule } from './employee-list/employee-list.module';
+import { SelectivePreloadingStrategyService } from './services/preloading-strategy.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    EmployeeListComponent,
-    LevelPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    EmployeeListModule
   ],
-  providers: [],
+  providers: [ SelectivePreloadingStrategyService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

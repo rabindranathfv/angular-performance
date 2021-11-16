@@ -11,3 +11,17 @@
     display: block;
   }
 }
+
+
+.m-fix {
+  margin: 50px;
+}
+
+.emp-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.emp-list-item {
+  margin: auto 20%;
+}

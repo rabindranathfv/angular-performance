@@ -1,13 +1,30 @@
-<app-employee-list
-  [data]="salesList"
-  department="Sales"
-  (add)="add(salesList, $event)"
-  (remove)="remove(salesList, $event)"
-></app-employee-list>
 
-<app-employee-list
-  [data]="rndList"
-  department="R&D"
-  (add)="add(salesList, $event)"
-  (remove)="remove(salesList, $event)"
-></app-employee-list>
+
+<div>
+  <div class="emp-list">
+    <app-employee-list class="emp-list-item"
+    [data]="salesList"
+    department="Sales"
+    (add)="add(salesList, $event)"
+    (remove)="remove(salesList, $event)"
+  ></app-employee-list>
+
+    <app-employee-list class="emp-list-item"
+      [data]="rndList"
+      department="R&D"
+      (add)="add(salesList, $event)"
+      (remove)="remove(salesList, $event)"
+    ></app-employee-list>
+  </div>
+
+
+  <div class="m-fix"> 
+    <button mat-button color="primary" (click)="redirect('about')">about</button>
+    <button mat-button color="primary" (click)="redirect('users')">users</button> 
+  </div>
+
+  <div class="m-fix">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

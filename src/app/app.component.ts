@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Employee } from './models/employee.model';
 import { GeneratorService } from './generator.service';
@@ -14,7 +15,8 @@ export class AppComponent implements OnInit {
   label: string;
 
   constructor(
-    private generator: GeneratorService
+    private generator: GeneratorService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -31,5 +33,9 @@ export class AppComponent implements OnInit {
 
   remove(list: Employee[], node: Employee) {
     list.splice(list.indexOf(node), 1);
+  }
+
+  redirect(route: string) {
+    this.router.navigateByUrl(`/${route}`);
   }
 }

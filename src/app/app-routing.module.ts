@@ -14,7 +14,7 @@ const routes: Routes = [
   { 
     path: 'about', 
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule),
-    data: { preload: true }
+    data: { preload: true, loadAfterSeconds: 4 }
   },
   { 
     path: 'users',

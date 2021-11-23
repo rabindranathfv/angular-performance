@@ -1,7 +1,7 @@
 import { FormControl } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { LevelPipe } from '../level.pipe';
-import { MaterialModule } from '../material/material.module'
+import { MaterialModule } from '../material/material.module';
 
 import { EmployeeListComponent } from './employee-list.component';
 

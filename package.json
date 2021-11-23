@@ -8,6 +8,7 @@
     "build-source-map": "ng build --aot=true --sourceMap=true --prod=true",
     "test": "ng test",
     "lint": "ng lint",
+    "lint-fix": "ng lint --fix",
     "e2e": "ng e2e",
     "explore": "source-map-explorer dist/**/*.js"
   },

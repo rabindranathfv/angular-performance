@@ -14,7 +14,7 @@ export class NetworkAwarePreloadingStrategyService implements PreloadingStrategy
       return of(null);
     }
     const speed = connection.effectiveType;
-    const slowConnections = ['slow-2g', '2g','3g'];
+    const slowConnections = ['slow-2g', '2g', '3g'];
     if (slowConnections.includes(speed)) {
       return of(null);
     }

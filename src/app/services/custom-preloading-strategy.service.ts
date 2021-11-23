@@ -8,12 +8,12 @@ import {map} from 'rxjs/operators';
 })
 export class CustomPreloadingStrategyService implements PreloadingStrategy {
 preload(route: Route, load: () => Observable<any>): Observable<any> {
-    const loadRoute = (delay) => delay > 0 
-    ? timer(delay*1000).pipe(map(() => load())) 
+    const loadRoute = (delay) => delay > 0
+    ? timer(delay * 1000).pipe(map(() => load()))
     : load();
     if (route.data && route.data.preload) {
         const delay = route.data.loadAfterSeconds ? route.data.loadAfterSeconds : 0;
-      return loadRoute(delay);
+        return loadRoute(delay);
     }
     return of(null);
   }
